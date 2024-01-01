@@ -1,4 +1,5 @@
-﻿using Validation.Interfaces;
+﻿using System.Globalization;
+using Validation.Interfaces;
 
 namespace Validation.Validators
 {
@@ -6,7 +7,9 @@ namespace Validation.Validators
     {
         public bool Execute(string value)
         {
-            return false;
+            var format = "dd.MM.yyyy";
+            DateTime parsedDate;
+            return DateTime.TryParseExact(value, format, CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate);
         }
     }
 }

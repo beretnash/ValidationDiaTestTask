@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Validation.Validators;
+﻿using Validation.Validators;
 
 namespace Validation.UnitTests.Validators
 {
+    [TestFixture]
     public class IndividualTaxNumberValidatorTests
     {
         [Test]
         [TestCase("1122334455", ExpectedResult = true)]
         [TestCase("1234567489", ExpectedResult = true)]
         [TestCase("2143658791", ExpectedResult = true)]
-        public bool Execute_ValidPassportNumber_ReturnsTrue(string passportNumber)
+        public bool Execute_IndividualTaxNumberValidator_ReturnsTrue(string taxNumber)
         {
             // Arrange
             IndividualTaxNumberValidator individualTaxNumberValidator = new IndividualTaxNumberValidator();
 
             // Act
-            bool result = individualTaxNumberValidator.Execute(passportNumber);
+            bool result = individualTaxNumberValidator.Execute(taxNumber);
 
             // Assert
             return result;
@@ -31,13 +27,13 @@ namespace Validation.UnitTests.Validators
         [TestCase("112233445F", ExpectedResult = false)]
         [TestCase("", ExpectedResult = false)]
         [TestCase(null, ExpectedResult = false)]
-        public bool Execute_InvalidPassportNumber_ReturnsFalse(string passportNumber)
+        public bool Execute_IndividualTaxNumberValidator_ReturnsFalse(string taxNumber)
         {
             // Arrange
             IndividualTaxNumberValidator individualTaxNumberValidator = new IndividualTaxNumberValidator();
 
             // Act
-            bool result = individualTaxNumberValidator.Execute(passportNumber);
+            bool result = individualTaxNumberValidator.Execute(taxNumber);
 
             // Assert
             return result;

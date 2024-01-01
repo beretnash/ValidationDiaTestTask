@@ -2,6 +2,7 @@
 
 namespace Validation.UnitTests.Validators
 {
+    [TestFixture]
     public class PassportValidatorTests
     {
         [Test]
