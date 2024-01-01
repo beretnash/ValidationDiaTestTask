@@ -2,6 +2,6 @@
 {
     public interface IValidator
     {
-        bool Execute();
+        bool Execute(string value);
     }
 }

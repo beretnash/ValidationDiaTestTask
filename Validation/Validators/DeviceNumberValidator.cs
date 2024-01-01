@@ -4,7 +4,7 @@ namespace Validation.Validators
 {
     public class DeviceNumberValidator : IValidator
     {
-        public bool Execute()
+        public bool Execute(string value)
         {
             return false;
         }
