@@ -1,4 +1,5 @@
-﻿using Validation.Interfaces;
+﻿using System.Text.RegularExpressions;
+using Validation.Interfaces;
 
 namespace Validation.Validators
 {
@@ -6,7 +7,8 @@ namespace Validation.Validators
     {
         public bool Execute(string value)
         {
-            return false;
+            var pattern = @"\d{10}";
+            return !string.IsNullOrEmpty(value) && value.Length == 10 && Regex.IsMatch(value, pattern);
         }
     }
 }
