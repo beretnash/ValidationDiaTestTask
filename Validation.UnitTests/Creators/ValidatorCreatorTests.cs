@@ -67,7 +67,7 @@ namespace Validation.UnitTests.Creators
 
 
         [Test]
-        public void CreateValidator_BadName_Exce()
+        public void CreateValidator_BadName_IncorrectValidatorExceptionThrown()
         {
             // Arrange
             IValidatorCreator _validatorCreator = new ValidatorCreator();

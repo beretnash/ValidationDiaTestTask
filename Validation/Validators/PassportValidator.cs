@@ -7,7 +7,8 @@ namespace Validation.Validators
     {
         public bool Execute(string value)
         {
-            return false;
+            var pattern = @"[АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЮЯ]{2}\d{6}";
+            return !string.IsNullOrEmpty(value) && Regex.IsMatch(value, pattern);
         }
     }
 }
