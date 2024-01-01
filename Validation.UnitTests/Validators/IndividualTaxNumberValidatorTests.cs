@@ -9,7 +9,7 @@ namespace Validation.UnitTests.Validators
         [TestCase("1122334455", ExpectedResult = true)]
         [TestCase("1234567489", ExpectedResult = true)]
         [TestCase("2143658791", ExpectedResult = true)]
-        public bool Execute_IndividualTaxNumberValidator_ReturnsTrue(string taxNumber)
+        public bool Execute_ValidIndividualTaxNumber_ReturnsTrue(string taxNumber)
         {
             // Arrange
             IndividualTaxNumberValidator individualTaxNumberValidator = new IndividualTaxNumberValidator();
@@ -27,7 +27,7 @@ namespace Validation.UnitTests.Validators
         [TestCase("112233445F", ExpectedResult = false)]
         [TestCase("", ExpectedResult = false)]
         [TestCase(null, ExpectedResult = false)]
-        public bool Execute_IndividualTaxNumberValidator_ReturnsFalse(string taxNumber)
+        public bool Execute_InvalidIndividualTaxNumber_ReturnsFalse(string taxNumber)
         {
             // Arrange
             IndividualTaxNumberValidator individualTaxNumberValidator = new IndividualTaxNumberValidator();

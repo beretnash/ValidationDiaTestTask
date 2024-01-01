@@ -9,13 +9,13 @@ namespace Validation.UnitTests.Validators
         [TestCase("01.01.2001", ExpectedResult = true)]
         [TestCase("02.12.2024", ExpectedResult = true)]
         [TestCase("31.12.2023", ExpectedResult = true)]
-        public bool Execute_BirthdayValidator_ReturnsTrue(string taxNumber)
+        public bool Execute_ValidBirthday_ReturnsTrue(string date)
         {
             // Arrange
             BirthdayValidator birthdayValidator = new BirthdayValidator();
 
             // Act
-            bool result = birthdayValidator.Execute(taxNumber);
+            bool result = birthdayValidator.Execute(date);
 
             // Assert
             return result;
@@ -27,13 +27,13 @@ namespace Validation.UnitTests.Validators
         [TestCase("31.02.2001", ExpectedResult = false)]
         [TestCase("", ExpectedResult = false)]
         [TestCase(null, ExpectedResult = false)]
-        public bool Execute_BirthdayValidator_ReturnsFalse(string taxNumber)
+        public bool Execute_InvalidBirthday_ReturnsFalse(string date)
         {
             // Arrange
             BirthdayValidator birthdayValidator = new BirthdayValidator();
 
             // Act
-            bool result = birthdayValidator.Execute(taxNumber);
+            bool result = birthdayValidator.Execute(date);
 
             // Assert
             return result;

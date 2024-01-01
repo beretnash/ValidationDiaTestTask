@@ -5,6 +5,6 @@
         public const string Passport = "passport";
         public const string IndividualTaxNumber = "rnokpp";
         public const string Birthday = "birthday";
-        public const string DeviceNumber = "imei";
+        public const string DeviceNumber = "uuid";
     }
 }
