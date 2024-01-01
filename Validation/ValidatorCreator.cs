@@ -1,4 +1,5 @@
 ﻿using Validation.Common;
+using Validation.Exceptions;
 using Validation.Interfaces;
 using Validation.Validators;
 
@@ -14,7 +15,7 @@ namespace Validation
                 ValidationParams.IndividualTaxNumber => new IndividualTaxNumberValidator(),
                 ValidationParams.Birthday => new BirthdayValidator(),
                 ValidationParams.DeviceNumber => new DeviceNumberValidator(),
-                _ => throw new Exception("Incorrect validation name param."),
+                _ => throw new IncorrectValidatorException("Incorrect validation name param."),
             };
         }
     }

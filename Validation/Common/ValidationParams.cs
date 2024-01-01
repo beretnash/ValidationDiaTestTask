@@ -1,6 +1,6 @@
 ﻿namespace Validation.Common
 {
-    internal static class ValidationParams
+    public static class ValidationParams
     {
         public const string Passport = "passport";
         public const string IndividualTaxNumber = "rnokpp";
