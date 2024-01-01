@@ -1,6 +1,6 @@
 ﻿namespace Validation.Interfaces
 {
-    internal interface IValidatorCreator
+    public interface IValidatorCreator
     {
         IValidator CreateValidator(string validatorName);
     }

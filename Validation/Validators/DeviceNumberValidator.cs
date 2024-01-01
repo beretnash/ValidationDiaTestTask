@@ -2,7 +2,7 @@
 
 namespace Validation.Validators
 {
-    internal class DeviceNumberValidator : IValidator
+    public class DeviceNumberValidator : IValidator
     {
         public bool Execute()
         {

@@ -2,7 +2,7 @@
 
 namespace Validation.Validators
 {
-    internal class PassportValidator : IValidator
+    public class PassportValidator : IValidator
     {
         public bool Execute()
         {

@@ -2,7 +2,7 @@
 
 namespace Validation.Validators
 {
-    internal class IndividualTaxNumberValidator : IValidator
+    public class IndividualTaxNumberValidator : IValidator
     {
         public bool Execute()
         {

@@ -1,6 +1,6 @@
 ﻿namespace Validation.Interfaces
 {
-    internal interface IValidator
+    public interface IValidator
     {
         bool Execute();
     }

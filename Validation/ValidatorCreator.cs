@@ -4,7 +4,7 @@ using Validation.Validators;
 
 namespace Validation
 {
-    internal class ValidatorCreator : IValidatorCreator
+    public class ValidatorCreator : IValidatorCreator
     {
         public IValidator CreateValidator(string validatorName)
         {

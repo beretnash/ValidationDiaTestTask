@@ -2,7 +2,7 @@
 
 namespace Validation.Validators
 {
-    internal class BirthdayValidator : IValidator
+    public class BirthdayValidator : IValidator
     {
         public bool Execute()
         {
